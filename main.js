@@ -36,12 +36,13 @@ function appendToDisplay(value) {
         if(displayValue == '0'){
             displayValue='';
         }
-        if (value == '.' && displayValue.includes('.')){
-            value = '';
-        }
         if (value == '.' && displayValue == ''){
             value = '0.'
         }
+        if (value == '.' && displayValue.includes('.')){
+            value = '';
+        }
+        
         displayValue +=value;
         updateDisplay();
     }
